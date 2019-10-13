@@ -1,12 +1,27 @@
-#latexHeader {
+h1 {
     text-align: center;
     color: aqua;
+    text-shadow: 3px 3px lightblue;
+    width: 100%;
+    font-size: 5vw;
+}
+
+h2 {
+    text-align: center;
+    color: aqua;
+    font-size: 2vw;
 }
 
 html {
+    background-color: #e6f9ff;
+}
+
+.content {
     margin-left: 10%;
     margin-right: 10%;
-    background-color: palegoldenrod;
+    width: 80%;
+    height: 100vh;
+    background-color: white;
 }
 
 .choices {
@@ -38,7 +53,7 @@ html {
 #startButton {
     padding: 2%;
     text-align: center;
-    width: 50%;
+    width: 30%;
     font-size: 200%;
     margin-left: auto;
     margin-right: auto;
@@ -47,4 +62,25 @@ html {
 
 #startButton:hover {
     background-color: cyan;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: lightblue;
+}
+
+nav li {
+    float: left;
+    display: block;
+    color: beige;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav li: hover {
+    background-color: #067191;
+    color: yellow;
 }
