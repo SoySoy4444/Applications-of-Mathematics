@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title> Personal Project Practice Website </title>
+    <script type="text/javascript" src="http://latex.codecogs.com/latexit.js"> </script>
+    <script type="text/javascript"> LatexIT.add('p',true); </script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 id="latexHeader"> LaTeX </h1>
+        <p>
+            $cos^2(x)+sin^2(x)=1$ <br>
+            $f(x)=4x+2$ <br>
+            ${-2e^x} \over {-2+x}$ <br>
+        </p>
+    
+    
+    <h2> Exercises</h2>
+    <!--
+    <p class="question"> $\int_{1}^{2} xe^{2x}+\frac{1}{x^2-3x}$ <br> </p>
+    <ol class="choiceList">
+        <li> Does not converge</li>
+        <li> ≈ 19.32 </li>
+        <li> ≈ 38.64 </li>
+        <li> ≈ 20.12 </li>
+    </ol>
+    -->
+    
+    <p id="startButton" onclick="start()"> Start </p>
+    
+    <div class = "question" id="question"> Question </div>
+    
+    <div class="choiceList"> 
+        <div class="choices" id="A" onclick="check('A')"> Choice 1 </div>
+        <div class="choices" id="B" onclick="check('B')"> Choice 2 </div>
+        <div class="choices" id="C" onclick="check('C')"> Choice 3 </div>
+        <div class="choices" id="D" onclick="check('D')"> Choice 4 </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

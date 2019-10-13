@@ -1,0 +1,50 @@
+#latexHeader {
+    text-align: center;
+    color: aqua;
+}
+
+html {
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: palegoldenrod;
+}
+
+.choices {
+    padding: 2%;
+    border-style: ridge;
+    border-color: aquamarine;
+    float: left;
+    width: 20%; /* since margin-left and margin-right are 10% each, total area = 80%. Therefore 80%/4 boxes = 20% per box. */
+    text-align: center;
+    background-color: cadetblue;
+    color: aqua;
+}
+
+.choices:hover{
+    text-decoration: underline;
+    font-size: 40px;
+}
+
+.question {
+    text-align: center;
+    font-weight: bold;
+    font-size: 150%;
+}
+
+.choiceList {
+    text-align: center;
+}
+
+#startButton {
+    padding: 2%;
+    text-align: center;
+    width: 50%;
+    font-size: 200%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: cornflowerblue;
+}
+
+#startButton:hover {
+    background-color: cyan;
+}
