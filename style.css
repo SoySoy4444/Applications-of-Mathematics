@@ -2,7 +2,6 @@ h1 {
     text-align: center;
     color: aqua;
     text-shadow: 3px 3px lightblue;
-    width: 100%;
     font-size: 5vw;
 }
 
@@ -13,16 +12,12 @@ h2 {
 }
 
 html {
-    background-color: #e6f9ff;
+    background-color: #DBE4EE;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.content {
-    margin-left: 10%;
-    margin-right: 10%;
-    width: 80%;
-    height: 100vh;
-    background-color: white;
-}
+/* -------------- Multiple Choice Quiz ------------ */
 
 .choices {
     padding: 2%;
@@ -51,36 +46,95 @@ html {
 }
 
 #startButton {
-    padding: 2%;
+    padding: 1%;
     text-align: center;
     width: 30%;
-    font-size: 200%;
+    font-size: 300%;
     margin-left: auto;
     margin-right: auto;
     background-color: cornflowerblue;
+    color: #054A91;
+    font-weight: 900;
 }
 
 #startButton:hover {
     background-color: cyan;
 }
 
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+/* --------------- DROP-DOWN NAV BAR --------------------- */
+nav {
     overflow: hidden;
-    background-color: lightblue;
+    background-color: #81A4CD;
+    padding: 5px 0px;
+    font-size: 120%;
 }
 
-nav li {
+nav img {
     float: left;
-    display: block;
-    color: beige;
-    padding: 14px 16px;
-    text-decoration: none;
+    width: 10%;
 }
 
-nav li: hover {
-    background-color: #067191;
-    color: yellow;
+/* for all links inside the nav bar (including Home, About, Carbon Dating, etc) */
+nav a {
+    float: left; /* float to the LEFT of each other */
+    color: #3E7CB1;
+    text-align: center; /*not working? */
+    padding: 12px 20px;
+    text-decoration: none; /*removes the underlines that are present in URL links (<a>) by default */
 }
+
+/* when any link (Home, About, Carbon Dating, etc) is hovered */
+nav a:hover {
+    background-color: #3E7CB1;
+    color: blue;
+}
+
+.dropdownContainer {
+    background-color: inherit; /* inherit from nav bar */
+    float: left;
+    overflow: hidden;
+}
+
+.dropdownContainer .dropdownCaret {
+    border: none; /* removes the default border that surrounds buttons */
+    margin: 0;
+    padding: 12px 10px;
+    /* max-width: 120px; */ 
+    /* ↑ If menu bar is too long, use above to chop into multiple lines */
+    background-color: inherit; /* default background colour for buttons is white, so it needs to inherit it from dropdownContainer. */
+    height: 100%;
+    color: #3E7CB1;
+    font-size: 80%;
+}
+
+/* By default, the dropdown contents should be */
+.dropdownContent {
+    background-color: #81A4CD;
+    visibility: hidden; /* hides the dropdown by defualt */
+    position: absolute;
+    display: block;
+    width: 180px;
+}
+
+/* Hover dropdownContainer (dropdown heading e.g. Qudratics, Probability) => SHOW the dropdownlist (.dropdownContent)*/
+.dropdownContainer:hover .dropdownContent {
+    visibility: visible; /* SHOW the dropdown list (change from visibility: hidden;) */
+}
+
+.dropdownContainer:hover {
+    background-color: #81A4CD;
+}
+
+/* For all links inside the dropdowns (Carbon Dating, pH-Scale, etc) */
+.dropdownContent a {
+    display: block;
+    float: none;
+    text-align: left;
+}
+
+/* When the dropdown link items (Carbon Dating, pH-Scale, etc) is hovered */
+.dropdownContent a: hover{ 
+    background-color: lightcyan;
+}
+
+/* ------------ ARTICLE CONTENT --------------------
