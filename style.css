@@ -17,24 +17,36 @@ html {
     margin-right: 5%;
 }
 
+body {
+    margin: 0;
+}
+
 hr {
     margin-top: 5%;
     margin-bottom: 5%;
 }
 
+p, li {
+    font-size: 1.2vw;
+}
+
 /* -------------- Multiple Choice Quiz ------------ */
 
 .choices {
-    padding: 2%;
+    padding: 1%;
     border-style: ridge;
     border-color: aquamarine;
     float: left;
-    width: 20%; /* since margin-left and margin-right are 10% each, total area = 80%. Therefore 80%/4 boxes = 20% per box. */
+    width: 21%;
+    /* width: 23%; /* since margin-left and margin-right are 1% each, and there are 8 spaces for margins between the choice boxes including the outside, total area = 100% - 8(1%) = 92. Padding is 1% each, and there are also 8 paddings. Therefore 92% - 8(1%) = 84%. 84%/4 boxes = 21% per box. */
     height: 30px;
     text-align: center;
     background-color: cadetblue;
     color: aqua;
-    font-size: 120%
+    font-size: 120%;
+    border-style: none; /* borders mess up width */
+    margin-left: 1%;
+    margin-right: 1%;
 }
 
 .choices:hover .choice{
@@ -50,6 +62,7 @@ hr {
 
 .choiceList {
     text-align: center;
+    width: 100%;
 }
 
 #startButton {

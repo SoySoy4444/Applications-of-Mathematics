@@ -11,6 +11,7 @@
 </head>
 <body>
     <nav>
+        <img src="images/logo.png"> 
         <a href="index.html"> Home </a>
         
         <div class="dropdownContainer">
@@ -91,19 +92,61 @@
     <ul>
         <li>Most often from outside our Solar System, but their origins, other than from supernovae, are yet to be found. </li>
         <li>They are sub-atomic fragments containing protons, few electrons and atomic nuclei including helium nucleus (alpha particles) or elements as heavy as lead. </li>
-        <i> Roughly 90% are hydrogen protons and 9% are alpha particles, the two most abundant elements in the universe. </i>
+        <li> Roughly 90% are hydrogen protons and 9% are alpha particles, the two most abundant elements in the universe. </li>
     </ul>
     <p>
-        When cosmic rays collide with atoms and molecules (mainly oxygen and nitrogen) in the Earth’s atmosphere, they form neutrons (zero protons, one proton). When these neutrons collide with nitrogen-14 (seven protons, seven neutrons), it replaces one of the nitrogen’s protons with itself, increasing the nitrogen-14 to 8 neutrons and reducing it to 6 protons. The replaced proton is emitted as a hydrogen atom (one proton, zero neutrons). By definition (number of protons defines an element), since it now only has 6 protons, it is now a radioactive, unstable isotope, carbon-14, due to its massive nucleus.
+        When cosmic rays collide with atoms and molecules (mainly oxygen and nitrogen) in the Earth’s atmosphere, they form neutrons (zero protons, one proton). When these neutrons collide with nitrogen-14 (seven protons, seven neutrons), it replaces one of the nitrogen’s protons with itself, increasing the nitrogen-14 to 8 neutrons and reducing it to 6 protons. The replaced proton is emitted as a hydrogen atom (one proton, zero neutrons). By definition (number of protons defines an element), since it now only has 6 protons, it is now a radioactive, unstable isotope, carbon-14, due to its massive nucleus. 
+    </p>
 
+    <p>
         Although carbon-12 is the stable, most abundant element of carbon on Earth, carbon-14 also enters the carbon cycle through various means such as photosynthesis (after combining with oxygen to form carbon dioxide, which plants intake) and then through the food chain, reaching humans as well. Once the organism dies, they no longer absorb carbon-14 as they can no longer consuming food. 
+    </p>
 
+    <p>
         The remaining carbon-14 will decay by beta minus decay to form nitrogen-14, an electron and an electron antineutrino. The rate of this decay is given by its half-life, equivalent to around 5,370 years for carbon-14. 
+    </p>
+    
+    <p>
+        Although carbon-12 is the stable, most abundant element of carbon on Earth, carbon-14 also enters the carbon cycle through various means such as photosynthesis (after combining with oxygen to form carbon dioxide, which plants intake) and then through the food chain, reaching humans as well. Once the organism dies, they no longer absorb carbon-14 as they can no longer consuming food.
+    </p>
+
+    <p>
+        The remaining carbon-14 will decay by <strong> beta minus decay </strong>to form nitrogen-14, an electron and an electron antineutrino. The rate of this decay is given by its <strong> half-life</strong>, equivalent to around 5,370 years for carbon-14. 
     </p>
 
     <h2> Mathematics </h2>
+    <p> 
+        Given the exponential decay formula $A=A_0e^{-kt}$ where $A$ = number of atoms left after time $t$, $A_0$ = number of atoms of the isotope in the original sample, $k$ = rate constant for radioactive decay, 
+    </p>
     
+    <p> 
+        $\frac{A}{A_0} =e^{-kt}$ <br>
+        $ln(\frac{A}{A_0}) =ln⁡(e^{-kt}) =-kt$ <br>
+        $t=\frac{ln(\frac{A}{A_0}))}{-k}$ <br>
+    </p>
     
+    <p>
+        To find $k$, note that when $t$ is at its half-life, $A$ will be half of $A_0$ (definition of half-life). 
+    </p>
+    
+    <p>
+        $t_{1/2}=\frac{ln(1/2)}{-k}$ <br>
+        $t_{1/2}=\frac{-ln(2)}{t_{1/2}}$ <br>
+        $k=\frac{ln(2)}{t_{1/2}}$ <br>
+    </p>
+
+    <p>
+        Substituting $k$,
+    </p>
+    
+    <p> 
+        $t=\frac{ln(\frac{A}{A_0})}{-\frac{ln(2)}{t_{1/2}}}$ <br>
+        $t=\frac{ln(\frac{A}{A_0})}{-ln(2)}*t_{1/2}$ <br>
+    </p>
+    
+    <p> 
+        <strong> Note:</strong> $k$ can also be found with calculus as it is a first-order differential reaction, but it is beyond the scope of this article which will focus on the applications of exponentials and logarithms.
+    </p>
     
     <h2> Comprehension Check: </h2>
     <!--
