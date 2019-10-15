@@ -1,20 +1,25 @@
 h1 {
     text-align: center;
-    color: aqua;
+    color: #F17300;
     text-shadow: 3px 3px lightblue;
     font-size: 5vw;
 }
 
 h2 {
     text-align: center;
-    color: aqua;
+    color: #3E7CB1;
     font-size: 2vw;
 }
 
 html {
     background-color: #DBE4EE;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+hr {
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
 
 /* -------------- Multiple Choice Quiz ------------ */
@@ -25,14 +30,16 @@ html {
     border-color: aquamarine;
     float: left;
     width: 20%; /* since margin-left and margin-right are 10% each, total area = 80%. Therefore 80%/4 boxes = 20% per box. */
+    height: 30px;
     text-align: center;
     background-color: cadetblue;
     color: aqua;
+    font-size: 120%
 }
 
-.choices:hover{
+.choices:hover .choice{
     text-decoration: underline;
-    font-size: 40px;
+    font-size: 200%;
 }
 
 .question {
@@ -64,9 +71,12 @@ html {
 /* --------------- DROP-DOWN NAV BAR --------------------- */
 nav {
     overflow: hidden;
-    background-color: #81A4CD;
+    /* background-color: #81A4CD; */
     padding: 5px 0px;
     font-size: 120%;
+    width: 80%; /* could do 100% for full width if desired */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 nav img {
