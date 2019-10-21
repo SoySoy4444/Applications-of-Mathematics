@@ -200,3 +200,9 @@ th, td {
     text-align: center;
     border-bottom: 2px solid #054A91;
 }
+
+/* --- */
+.benford {
+    float: left;
+    width: 33.33%;
+}

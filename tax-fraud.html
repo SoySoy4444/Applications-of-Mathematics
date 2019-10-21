@@ -84,14 +84,32 @@
         <a href="abouts.html"> Abouts </a>
     </nav>
 
-    <div class="content">
-        <h1> Tax Fraud</h1>
+    <h1> Tax Fraud</h1>
         
-        <h2> Introduction </h2>
-        <p> 
-            Let’s suppose you look at the latest census for wherever you live, and you count the frequencies of each leading digit (1 – 9) for its population. You would expect the count to be all roughly equal, no? 
-        </p>
-    </div>
+    <h2> Introduction </h2>
+    <p> 
+          Let’s suppose you look at the latest census for wherever you live, and you count the frequencies of each leading digit (1 – 9) for its population. You would expect the count to be all roughly equal, no? 
+    </p>
+        
+    <h2> Applications</h2>
+    <iframe width="100%" height="346" frameborder="0" scrolling="no" src="https://onedrive.live.com/embed?resid=548FF1D9016D5AE7%21445&authkey=%21AKo23Ewjq25nsVY&em=2&wdAllowInteractivity=False&wdHideGridlines=True&wdHideHeaders=True&wdDownloadButton=True&wdInConfigurator=True"> </iframe>
+    
 
+    <h2> Test it Yourself! </h2>
+    <div>
+        <div class="benford">
+            <textarea id="numbersInput" rows="12" cols="30"> Enter numbers, each on its new line.
+            </textarea>
+            <button type="button" onclick="benford()">Calculate</button>
+        </div>
+        <div class="benford" id="counts">
+            Counts
+        </div>
+        <div class="benford" id="probabilities">
+            Probabilities
+        </div>
+    </div>
+    
+    <script src="benford.js"></script>
 </body>
 </html>
