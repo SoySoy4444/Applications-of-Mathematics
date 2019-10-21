@@ -11,10 +11,16 @@ h2 {
     font-size: 2vw;
 }
 
+h3 {
+    color: #81A4CD;
+    font-size 1.8vw;
+}
+
 html {
-    background-color: #DBE4EE;
-    margin-left: 5%;
-    margin-right: 5%;
+    /* background-color: #DBE4EE; */
+    background-color: rgba(219,228,238, 0.5);
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 body {
@@ -27,7 +33,21 @@ hr {
 }
 
 p, li {
-    font-size: 1.2vw;
+    font-size: 1.5vw;
+}
+
+img {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* LaTeX maths equations */
+.equations {
+    text-align: center;
+}
+
+.articleImage {
+    max-width: 100%;
 }
 
 /* -------------- Multiple Choice Quiz ------------ */
@@ -41,12 +61,13 @@ p, li {
     /* width: 23%; /* since margin-left and margin-right are 1% each, and there are 8 spaces for margins between the choice boxes including the outside, total area = 100% - 8(1%) = 92. Padding is 1% each, and there are also 8 paddings. Therefore 92% - 8(1%) = 84%. 84%/4 boxes = 21% per box. */
     height: 30px;
     text-align: center;
-    background-color: cadetblue;
-    color: aqua;
+    background-color: #81A4CD;
+    color: #F17300;
     font-size: 120%;
     border-style: none; /* borders mess up width */
     margin-left: 1%;
     margin-right: 1%;
+    border-radius: 30px;
 }
 
 .choices:hover .choice{
@@ -72,9 +93,10 @@ p, li {
     font-size: 300%;
     margin-left: auto;
     margin-right: auto;
-    background-color: cornflowerblue;
-    color: #054A91;
+    background-color: #81A4CD;
+    color: #F17300;
     font-weight: 900;
+    border-radius: 50px;
 }
 
 #startButton:hover {
@@ -90,6 +112,7 @@ nav {
     width: 80%; /* could do 100% for full width if desired */
     margin-left: auto;
     margin-right: auto;
+    border-bottom: 5px ridge #F17300;
 }
 
 nav img {
@@ -122,10 +145,10 @@ nav a:hover {
     border: none; /* removes the default border that surrounds buttons */
     margin: 0;
     padding: 12px 10px;
-    /* max-width: 120px; */ 
+    /* width: 240px; */ 
     /* ↑ If menu bar is too long, use above to chop into multiple lines */
     background-color: inherit; /* default background colour for buttons is white, so it needs to inherit it from dropdownContainer. */
-    height: 100%;
+    /* height: 100%; */
     color: #3E7CB1;
     font-size: 80%;
 }
@@ -136,7 +159,8 @@ nav a:hover {
     visibility: hidden; /* hides the dropdown by defualt */
     position: absolute;
     display: block;
-    width: 180px;
+    min-width: 100%;
+
 }
 
 /* Hover dropdownContainer (dropdown heading e.g. Qudratics, Probability) => SHOW the dropdownlist (.dropdownContent)*/
@@ -160,4 +184,19 @@ nav a:hover {
     background-color: lightcyan;
 }
 
-/* ------------ ARTICLE CONTENT --------------------
+/* Has nothing to do with dropdown, tells user which site s/he is on */
+.activeSite {
+    background-color: rgba(241,115,0, 0.2); /* #F17300 */
+}
+
+/* ------------ GLOSSARY  --------------------  */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 2px solid #054A91;
+}

@@ -1,47 +1,48 @@
 /*jslint devel: true, browser: true*/
+/*jslint node: true */
 
 "use strict";
 
 var score = 0;
 var questions = [
     {
-        question : "4arcsin(x)=pi",
-        choiceA : "x=22sqrt(2)",
-        choiceB : "x=2",
-        choiceC : "$x=1/sqrt(2)",
-        choiceD : "x=1/2",
-        correct : "C",
+        question: "4arcsin(x)=pi",
+        choiceA: "x=22sqrt(2)",
+        choiceB: "x=2",
+        choiceC: "$x=1/sqrt(2)",
+        choiceD: "x=1/2",
+        correct: "C",
         difficulty: 2,
-        answerEquation : true,
+        answerEquation: true,
         questionEquation: true
     }, {
-        question : "8x^2-2x-3=0",
-        choiceA : "x = 1/2, x=3/4",
-        choiceB : "x = -1/2, x = 3/4",
-        choiceC : "x = 1/2, x = -3/4",
-        choiceD : "x = -1/2, x = -3/4",
-        correct : "B",
+        question: "What is the equation for beta decay of carbon-14?",
+        choiceA: "FALSE",
+        choiceB: "TRUE",
+        choiceC: "FALSE",
+        choiceD: "FALSE",
+        correct: "B",
         difficulty: 1,
-        answerEquation : true,
-        questionEquation: true
+        answerEquation: false,
+        questionEquation: false
     }, {
-        question : "Which of these is a complex number?",
-        choiceA : "2-i",
-        choiceB : "-30i",
-        choiceC : "pi",
-        choiceD : "All of them",
-        correct : "D",
+        question: "Which of these is a complex number?",
+        choiceA: "2-i",
+        choiceB: "-30i",
+        choiceC: "pi",
+        choiceD: "All of them",
+        correct: "D",
         difficulty: 2,
-        answerEquation : false,
+        answerEquation: false,
         questionEquation: false
     }, {
         question: "Good job!",
-        choiceA : "😊",
-        choiceB : "😊",
+        choiceA: "😊",
+        choiceB: "😊",
         choiceC: "😊",
-        choiceD : "😊",
+        choiceD: "😊",
         correct: "😊",
-        answerEquation : false,
+        answerEquation: false,
         questionEquation: false
     }
 ];
@@ -53,6 +54,7 @@ function updateScore(difficulty) {
 }
 
 var currentQuestion = 0;
+
 function render(currentQuestion) {
     var choiceA = document.getElementById("A");
     var choiceB = document.getElementById("B");
@@ -77,7 +79,7 @@ function render(currentQuestion) {
     } else {
         question.innerHTML = questions[currentQuestion].question;
     }
-    
+
     if (currentQuestion === questions.length - 1) {
         // finish();
     }
