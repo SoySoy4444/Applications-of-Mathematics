@@ -68,6 +68,7 @@ img {
     margin-left: 1%;
     margin-right: 1%;
     border-radius: 30px;
+    display: block;
 }
 
 .choices:hover .choice{
@@ -75,7 +76,7 @@ img {
     font-size: 200%;
 }
 
-.question {
+.setup {
     text-align: center;
     font-weight: bold;
     font-size: 150%;
@@ -101,6 +102,16 @@ img {
 
 #startButton:hover {
     background-color: cyan;
+}
+
+#finished {
+    clear: left;
+    text-align: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    border-radius: 15px;
+    color: white;
+    display: none;
 }
 
 /* --------------- DROP-DOWN NAV BAR --------------------- */
@@ -139,6 +150,8 @@ nav a:hover {
     background-color: inherit; /* inherit from nav bar */
     float: left;
     overflow: hidden;
+    width: 150px;
+    text-align: center;
 }
 
 .dropdownContainer .dropdownCaret {
@@ -159,8 +172,7 @@ nav a:hover {
     visibility: hidden; /* hides the dropdown by defualt */
     position: absolute;
     display: block;
-    min-width: 100%;
-
+    width: inherit;
 }
 
 /* Hover dropdownContainer (dropdown heading e.g. Qudratics, Probability) => SHOW the dropdownlist (.dropdownContent)*/
@@ -176,7 +188,7 @@ nav a:hover {
 .dropdownContent a {
     display: block;
     float: none;
-    text-align: left;
+    text-align: center;
 }
 
 /* When the dropdown link items (Carbon Dating, pH-Scale, etc) is hovered */
@@ -201,8 +213,10 @@ th, td {
     border-bottom: 2px solid #054A91;
 }
 
-/* --- */
+/* ----------------------------------------- */
 .benford {
     float: left;
     width: 33.33%;
 }
+
+/* -------------------------------------- */
