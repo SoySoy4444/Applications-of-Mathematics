@@ -20,7 +20,7 @@
 
 <body>
     <nav>
-        <img src="logo.png">
+        <img src="images/logo.png">
         <a href="index.html"> Home </a>
 
         <div class="dropdownContainer">
@@ -91,20 +91,25 @@
         <a href="abouts.html"> Abouts </a>
     </nav>
 
-    <h1> Carbon Dating </h1>
+    <div id="tableOfContentsContainer">
+        <div id="tableOfContentsTitle"></div>
+        <div id="tableOfContents"></div>
+    </div>
+    
+    <h1 id="h1i"> Carbon Dating </h1>
 
-    <h2> Introduction </h2>
+    <h2 id="h2i"> Introduction </h2>
     <p> <strong> Radiocarbon dating</strong>, also known as <strong> carbon-14 dating </strong> or simply <strong> carbon dating</strong>, is used to calculate the approximate ages of carbon-based artefacts such as plants, bones or clothes. </p>
 
 
-    <h3> Quick Refresher: What are Cosmic Rays?</h3>
+    <h3 id="h3i"> Quick Refresher: What are Cosmic Rays?</h3>
     <ul>
         <li>Unknown, most often from outside our Solar System (supernovae). </li>
         <li> Sub-atomic fragments containing protons, few electrons and atomic nuclei including helium nucleus (alpha particles) or elements as heavy as lead. </li>
         <li> Roughly 90% are hydrogen protons and 9% are alpha particles, the two most abundant elements in the universe. </li>
     </ul>
 
-    <h3>So... what's the deal with carbon-14?</h3>
+    <h3 id="#h3ii">So... what's the deal with carbon-14?</h3>
 
     <h4> How is carbon-14 formed?</h4>
     <ol>
@@ -120,16 +125,16 @@
         Although carbon-12 is the stable, most abundant element of carbon on Earth, carbon-14 also enters the carbon cycle through various means such as photosynthesis (after combining with oxygen to form carbon dioxide, which plants intake) and then through the food chain, reaching humans as well. Once the organism dies, they no longer absorb carbon-14 as they are no longer consuming food.
     </p>
 
-    <img src="carbon-14.jpg" alt="carbon-14 entering the carbon cycle" class="articleImage">
+    <img src="images/carbon-dating/carbon-14.jpg" alt="carbon-14 entering the carbon cycle" class="articleImage">
 
     <h4> What happens to the carbon-14 now?</h4>
     <p>
         The remaining carbon-14 will decay by <strong> beta minus decay </strong>to form nitrogen-14, an electron and an electron antineutrino. The rate of this decay is given by its <strong> half-life</strong>, equivalent to around 5,370 years for carbon-14.
     </p>
 
-    <img src="beta-decay.png" alt="Beta Decay" class="articleImage">
+    <img src="images/carbon-dating/beta-decay.png" alt="Beta Decay" class="articleImage">
 
-    <h2> Mathematics </h2>
+    <h2 id="h2ii"> Mathematics </h2>
     <p>
         Given the exponential decay formula $A=A_0e^{-kt}$ where $A$ = number of atoms left after time $t$, $A_0$ = number of atoms of the isotope in the original sample, $k$ = rate constant for radioactive decay,
     </p>
@@ -163,7 +168,7 @@
         <strong> Note:</strong> $k$ can also be found with calculus as it is a first-order differential reaction, but it is beyond the scope of this article which will focus on the applications of exponentials and logarithms.
     </p>
 
-    <h2> Comprehension Check: </h2>
+    <h2 id="h2iii"> Comprehension Check: </h2>
     <!--
         <p class="question"> $\int_{1}^{2} xe^{2x}+\frac{1}{x^2-3x}$ <br> </p>
         <ol class="choiceList">
@@ -192,7 +197,7 @@
 
     <hr>
 
-    <h2>Glossary</h2>
+    <h2 id="h2iv">Glossary</h2>
     <p> Here is a glossary of the key terms used in this article. You may want to review some of them after you complete your comprehension check. </p>
     <table>
         <tr>
@@ -210,6 +215,7 @@
     </table>
 
     <script src="quiz.js"></script>
+    <script src="tableOfContents.js"></script>
 </body>
 
 </html>
