@@ -19,8 +19,8 @@ h3 {
 html {
     /* background-color: #DBE4EE; */
     background-color: rgba(219,228,238, 0.5);
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 5%;
+    margin-right: 20%;
 }
 
 body {
@@ -222,7 +222,45 @@ th, td {
     width: 33.33%;
 }
 
-/* -------------------------------------- */
+/* --------------- Progress Bar ----------------------- */
 #loading {
     display: none;
 }
+/* ---------------Table of Contents ---------------------- */
+
+#tableOfContentsContainer {
+    position: fixed;
+    right: 0%;
+    top: 10%;
+    width: 18%; /* margin-right: 20% for <html>, so by setting it to 18%, gives room for borders and stuff */
+    border-style: ridge;
+    line-height: 1.6;
+}
+
+/*
+#tableOfContents ul li {
+    font-size: 1.8vw;
+}
+*/
+
+#h2 {
+    font-weight: bold;
+    font-size: 1.3vw;
+}
+
+#h3 {
+    font-size: 1.1vw;
+}
+
+#tableOfContents ul li a:visited {
+    color: black;
+}
+
+#tableOfContents ul li a:hover {
+    color: #F17300;
+}
+
+#tableOfContentsTitle {
+    font-size: 1.5vw;
+}
+/* ------------------------------------------- */
