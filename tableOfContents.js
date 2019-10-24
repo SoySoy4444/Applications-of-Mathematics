@@ -51,5 +51,5 @@ for (i = 0; i < h2List.length; i++) {
 */
 
 finalText += "</ul>";
-alert(finalText);
+/* alert(finalText); */
 document.getElementById("tableOfContents").innerHTML = finalText;
