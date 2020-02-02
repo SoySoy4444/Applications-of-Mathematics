@@ -87,23 +87,27 @@
         <a href="abouts.html"> Abouts </a>
     </nav>
 
+    <h1 id="h1i"> Fraud Detection </h1>
     
     <div id="tableOfContentsContainer">
         <div id="tableOfContentsTitle"></div>
         <div id="tableOfContents"></div>
     </div>
-
-    <h1 id="h1i"> Fraud Detection </h1>
         
+    <div id="keywords">
+        <strong> Background Knowledge:</strong> Basic logarithmic manipulation, understanding of base systems, basic probability <br>
+        <strong> Keywords:</strong> probability distribution, number bases, logarithms
+    </div>
+
     <h2 id="h2i"> Introduction </h2>
-        <p> 
+        <p>
             Let’s suppose you look at the latest census for wherever you live, and you count the frequencies of each leading digit (1 – 9) for its population. You would expect the count to be all roughly equal, that they would each occur about 1/9 or 11% of the time, no?
 
             WRONG.
 
             That is the principle behind Benford’s Law. It states that 1 occurs as the leading digit of a number around 30% of the time, whereas 9 appears only around 5% of the time. 
 
-            In particular, it gives the probability $P(d)$ that a randomly chosen number starts with the leading digit $d$ where $d \in \{1, 2 … 9 \}$. 
+            In particular, it gives the probability $P(d)$ that a randomly chosen number starts with the leading digit $d$ where $d \in \{1, 2 \ldots 9 \}$. 
         </p>
 
         <div class="equations">
@@ -166,10 +170,10 @@
     
         <p>
             A number $x$ has a leading digit $d$ if and only if $log_{10}(d) \leqslant \{ log_{10}(x) \} &lt; log_{10}(d+1)$ <br>
-            <strong>Note: </strong> The curly braces {} denote the <strong>fractional part,</strong> or $frac(x) = x-\lfloor x \rfloor$, which essentially returns just the fractional part of x, hence the name.
+            <strong>Note: </strong> The curly braces {} denote the <strong>fractional part,</strong> or $frac(x) = x-\lfloor x \rfloor$, which essentially returns just the fractional part of $x$, hence the name.
         </p>
         <p>
-            For example, x=231 and d=2 because <br>
+            For example, for the number $x=231$, the leading digit $d=2$ because <br>
             $log_{10}(2) \leqslant \{ log_{10}(231) \} &lt; log_{10}(3)$ <br>
             $0.3 \leqslant 0.36 &lt; 0.48$
         </p>
@@ -180,14 +184,14 @@
     
         <h3 id="h3i"> Generalisation to Different Base Systems </h3>
             <p>
-                So far, we have been working with the decimal system, and thus our logarithm is in base 10. In fact, Benford’s law can be generalised to other bases b, where: <br>
+                So far, we have been working with the decimal system, and thus our logarithm is in base 10. In fact, Benford’s law can be generalised to other bases $b$, where: <br>
                 $P(d)=log_{b}(1+\frac{1}{d})$ <br>
                 
-                For example, in the hexadecimal base ($b = 16$), 
+                For example, in the hexadecimal base $b = 16$, 
             </p>
                 <ul>   
                     <li>1 occurs $log_{16}(1+\frac{1}{1})$ ≈ 25% of the time, </li>
-                    <li>F (decimal equivalent is 15) occurs $log_{16}(1+\frac{1}{15})$ ≈ 2.23% of the time.</li>
+                    <li>F (hexadecimal equivalent of the decimal number 15) occurs $log_{16}(1+\frac{1}{15})$ ≈ 2.23% of the time.</li>
                 </ul>
     
         <h3 id="h3ii"> Generalisation to Digits Beyond the First </h3>
@@ -196,7 +200,7 @@
             </p>
             <h4> First n Digits Test</h4>
                 <p>
-                    For example, the probability of a number starting with 12 is $log_{10}(1+\frac{1}{12})$ ≈3.5%.
+                    For example, the probability of a number starting with 12... is $log_{10}(1+\frac{1}{12})$ ≈3.5%.
                     Likewise, the probability of a number starting with 999 is $log_{10}(1+\frac{1}{999})$ ≈ 0.00043%. 
                 </p>
             <h4> Second Digit Test</h4>
@@ -210,14 +214,22 @@
 
     <h2 id="h2iii"> Applications </h2>
     
+        <p> Some distributions that may not follow the Benford distribution are:</p>
+        <ul>
+            <li>Sequentially assigned numbers (e.g. check numbers, invoice numbers, etc) </li>
+            <li>Number influenced by human thought (e.g. prices set by psychological tricks, like $1.99 instead of 2)</li>
+            <li>Accounts with a built-in minimum or maximum limit (e.g. a maximum of $10000 can be withdrawn at a time)</li>
+        </ul>
+        <p> Numbers that represent magnitudes of events, such as populations of cities, flows of water in rivers or sizes of celestial bodies, usually follow the Benford distribution.</p>
+    
         <h3 id="h3iii"> Fraudulent Data </h3>
             <p> 
-                Since humans tend to think in uniform, or at best, Gaussian distribution, it is difficult to manually construct distributions that satisfy Benford’s law. Even if they consciously manipulate the first digits of their data, in practice, the generalised form of the law above is used to check for multiple digits and hence increase precision. Therefore, scientists can identify fraudulent numerical data sets by checking to see if it agrees with Benford’s law.
+                Since humans tend to think in <strong> Uniform, </strong> or at best, <strong> Normal Distribution</strong>, it is difficult to manually construct distributions that satisfy Benford’s law. Even if they consciously manipulate the first digits of their data, in practice, the generalised form of the law above is used to check for multiple digits and hence increase precision. Therefore, scientists can identify fraudulent numerical data sets by checking to see if it agrees with Benford’s law.
             </p>
     
             <h4> Fraudulent Greek Government Data </h4>
             <p>
-                In 2011, scientists analysed 130 different values from 11 years’ worth of official macroeconomic data that EU Member States reported to Eurostat, including total debt, government cash reserves and pensions of retired civil servants. From Benford’s law, they found that that the Greek government’s data deviated significantly from the Benford distribution, particularly in the year 2000 – one year before Greece officially joined the EU. This suggests that the government manipulated their data, and that had Benford’s law been used at the time, the Greek government may not have been able to enter the EU. This could have prevented the current Greek economic crisis.
+                In 2011, scientists analysed 130 different values from 11 years’ worth of official macroeconomic data that EU Member States reported to Eurostat, including total debt, government cash reserves and pensions of retired civil servants. From Benford’s law, they found that that the Greek government’s data deviated significantly from the Benford distribution, particularly in the year 2000 – one year before Greece officially joined the EU. This suggests that the government manipulated their data, and that had Benford’s law been used at the time, the Greek government may not have been able to enter the EU. Economists say that this simple law could have prevented the current Greek economic crisis.
             </p>
     
             <h4> Where else can it be used? </h4>
@@ -253,7 +265,8 @@
                 <img src="images/fraud-detection/square-root.png" class="articleImage">
                 <figcaption> Even though a million terms were tested, the square root does not follow the Benford distribution. In fact, the trend seems to be the reverse: 9 occurs the most often at almost 20%, followed by 8, 7, etc with 1 only appearing about 3% of the time.</figcaption>
             </figure>
-
+            <p> The proofs for these findings are beyond the scope of this article, but feel free to look them up yourelf!</p>
+    
     <h2 id="h2iv"> Did You Know? </h2>
         <ul>
             <li>In 1938, Frank Benford, a research physicist and the law’s namesake, collected more than 20,000 numbers from 20 sources and showed that they all satisfied the law. </li>
@@ -299,8 +312,23 @@
     </div>
     
     <hr>
-
+    
     <h2 id="h2vii"> Glossary </h2>
+    <p> Here is a glossary of the key terms used in this article. You may want to review some of them after you complete your comprehension check. </p>
+    <table>
+        <tr>
+            <th>Word</th>
+            <th>Definition</th>
+        </tr>
+        <tr>
+            <td>Uniform Distribution</td>
+            <td>Where all outcomes are equally likely. For example, most people would intuitively think that the frequency of the leading digits 1-9 should be about the same, or 11.11%.</td>
+        </tr>
+        <tr>
+            <td>Normal Distribution</td>
+            <td>Where data near the mean/average occurs more frequently than data far from it (think of a bell shaped curve). For example, most people are about 160cm - 180cm tall, and very few are shorter than 140cm or taller than 200cm.</td>
+        </tr>
+    </table>
     <script src="benford.js"></script>
     <script src="quiz.js"></script>
     <script src="tableOfContents.js"></script>

@@ -2,18 +2,20 @@ h1 {
     text-align: center;
     color: #F17300;
     text-shadow: 3px 3px lightblue;
-    font-size: 5vw;
+    /* font-size: 5vw; */
+    font-size:3em;
 }
 
 h2 {
     text-align: center;
     color: #3E7CB1;
-    font-size: 2vw;
+   /* font-size: 2vw; */
+    font-size: 1.5em;
 }
 
 h3 {
     color: #81A4CD;
-    font-size 1.8vw;
+    /* font-size 1.8vw; */
 }
 
 html {
@@ -21,6 +23,7 @@ html {
     background-color: rgba(219,228,238, 0.5);
     margin-left: 5%;
     margin-right: 20%;
+    font-family: Times New Roman;
 }
 
 body {
@@ -32,9 +35,12 @@ hr {
     margin-bottom: 5%;
 }
 
-p, li {
-    font-size: 1.5vw;
+
+p, b, li {
+    /*font-size: 1.5vw; */
+    font-size: 1.2em;
 }
+
 
 img {
     margin-left: auto;
@@ -127,6 +133,7 @@ nav {
     border-bottom: 5px ridge #F17300;
 }
 
+/* logo */
 nav img {
     float: left;
     width: 10%;
@@ -228,13 +235,23 @@ th, td {
 }
 /* ---------------Table of Contents ---------------------- */
 
+/*
 #tableOfContentsContainer {
     position: fixed;
     right: 0%;
     top: 10%;
-    width: 18%; /* margin-right: 20% for <html>, so by setting it to 18%, gives room for borders and stuff */
+    width: 18%;  margin-right: 20% for <html>, so by setting it to 18%, gives room for borders and stuff
     border-style: ridge;
     line-height: 1.6;
+}  */
+
+#tableOfContentsContainer {
+    position: sticky;
+    float: right;
+    top: 0;
+    width: 25%; 
+    line-height: 1.6;
+    transform: translate(100%, 0);
 }
 
 /*
@@ -263,4 +280,30 @@ th, td {
 #tableOfContentsTitle {
     font-size: 1.5vw;
 }
-/* ------------------------------------------- */
+/* ---------------------------------------------- */
+
+.toolTipHover {
+    display: inline;
+    position: relative;
+}
+
+.toolTipText {
+    background-color: #054A91;
+    text-align: center;
+    display: none;
+    color: white;
+    max-width: 20%; /* relative to body */
+    max-height: 36px;
+    overflow: scroll;
+    padding: 3px;
+    border-radius: 5px;
+    z-index: 1;
+    position: relative;
+    font-size: 0.9vw;
+    top: 21px; /* 3px top padding + 18px font size */
+    right: 20%;
+}
+
+.toolTipHover:hover .toolTipText{
+    display: inline-block;
+}

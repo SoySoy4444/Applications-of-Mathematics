@@ -3,10 +3,10 @@
 "use strict";
 
 function benford() {
-    var integers = document.getElementById("numbersInput").value,
-        integersList = integers.split("\n"),
-        counts = [],
-        i = 0;
+    var integers = document.getElementById("numbersInput").value, /* get the value of numbersInput, i.e. the textarea */
+        integersList = integers.split("\n"), /* create a list of integers */
+        counts = [], /* to push (Python equivalent of append) to in the for loop */
+        i = 0; /* to iterate in the for loop */
 /* 
     alert(integersList[0]);
     alert(integersList[1]);
@@ -14,7 +14,8 @@ function benford() {
 */
 
     for (i; i < integersList.length; i += 1) {
-        counts.push(integersList[i][0]);
+        counts.push(integersList[i][0]); 
+        /* push (append) to counter the 0th letter (leading digit) of the integer of the ith row  */
     }
     
     i = 0;
@@ -101,4 +102,3 @@ function benford() {
     */
     
 }
-    

@@ -1,0 +1,52 @@
+nav ul {
+    position: relative;
+	display: inline-table;
+	list-style: none;
+    width: 100%;
+}
+
+nav ul li:hover > ul {
+	display: block;
+}
+
+nav ul li {
+	float: left;
+	list-style-type: none;
+}
+
+nav ul li a {
+  background-color: #dae8ec;
+  color: rgb(233, 78, 31);
+  display: block;
+  font-weight: bold;
+  margin: 0 auto;
+  padding: 9px 18px 9px;
+  text-decoration: none;
+  border: 1px solid black;
+  border-radius: 2px;
+}
+
+nav ul ul {
+  display: none;
+	position: relative;
+	top: 100%;
+  width: auto;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul ul li {
+  float: none;
+  position: relative;
+  clear: both;
+}
+
+nav ul ul li a {
+  padding: 7px 10px;
+  color: rgb(233, 78, 31);
+}
+
+nav ul li a:hover {
+  background: rgb(138, 92, 132);
+	color: #dae8ec;
+}

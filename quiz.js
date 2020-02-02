@@ -73,44 +73,34 @@ function carbonDatingQuiz() {
 function fraudDetectionQuiz() {
     window.questions = [
         {
-            question: "What is the name of the law?",
-            choiceA: "Benford",
-            choiceB: "Bengord",
-            choiceC: "Fenbord",
-            choiceD: "Fenford",
-            correct: "A",
+            question: "What does the Benford distribution say about the probabilities of the leading digits?",
+            choiceA: "All equally likely",
+            choiceB: "All random",
+            choiceC: "Decrease from 1 to 9",
+            choiceD: "Highest near the middle, i.e. 4, 5, 6.",
+            correct: "C",
             difficulty: 1,
             answerEquation: false,
             questionEquation: false
         }, {
-            question: "What is the name of the law?2",
-            choiceA: "Bengord",
-            choiceB: "Benford",
-            choiceC: "Fenbord",
-            choiceD: "Fenford",
-            correct: "B",
+            question: "True or False: A) Benford's law works in other base systems. B) Benford's law can be extended to a string of digits or any nth digit.",
+            choiceA: "Both false",
+            choiceB: "Only A is true",
+            choiceC: "Only B is true",
+            choiceD: "Both true",
+            correct: "D",
             difficulty: 2,
             answerEquation: false,
             questionEquation: false
         }, {
-            question: "What is the name of the law?3",
-            choiceA: "Fenbord",
-            choiceB: "Bengord",
-            choiceC: "Benford",
-            choiceD: "Fenford",
-            correct: "C",
+            question: "Which of these is NOT expected to follow the Benford distribution?",
+            choiceA: "Prices of goods in a supermarket",
+            choiceB: "Election results",
+            choiceC: "Stock prices",
+            choiceD: "Death rates",
+            correct: "A",
             answerEquation: false,
             difficulty: 3,
-            questionEquation: false
-        }, {
-            question: "What is the name of the law?4",
-            choiceA: "Benford",
-            choiceB: "Bengord",
-            choiceC: "Fenbord",
-            choiceD: "Fenford",
-            correct: "A",
-            difficulty: 4,
-            answerEquation: false,
             questionEquation: false
         }
     ];
@@ -143,16 +133,16 @@ function check(answer) {
             finishedText = document.getElementById("finished"),
             i;
         
-        /* ----Remove all the question and choice divs ----- */ 
+        /* ----Remove all the question and choice divs ----- */
         for (i = 0; i < choices.length; i++) {
             choices[i].style.display = "none";
         }
         for (i = 0; i < htmlQuestions.length; i++) {
             htmlQuestions[i].style.display = "none";
         }
-        /* --------------------------------------------------*/ 
+        /* --------------------------------------------------*/
         
-        /* show the game over text depending on % correct. */
+        /* set the game over text depending on % correct. */
         if (correct / window.questions.length > 0.8) {
             finishedText.innerHTML = "Congratulations, you got over 80%! You seem to know your stuff!";
             finishedText.style.backgroundColor = "#006600";
@@ -163,7 +153,7 @@ function check(answer) {
             finishedText.innerHTML = "Unlucky, perhaps come back to this on another day...?";
             finishedText.style.backgroundColor = "#cc3300";
         }
-        finishedText.style.display = "block";
+        finishedText.style.display = "block"; /* display the game over text */
     } else { /* if game is not over */
         render(currentQuestion); /* render the next question */
     }
