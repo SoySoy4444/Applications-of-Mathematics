@@ -1,3 +1,3 @@
-# personal-project
+# Applications of Mathematics
 Educational website featuring various applications of mathematics in real life. 
-Created for my G10 Personal Project. 
+Created for my IB G10 Personal Project. 
